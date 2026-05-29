@@ -1,3 +1,33 @@
-git add .
-git commit -m "Add GitHub Actions workflow"
-git push
+name: MEGA to Direct Links Converter
+
+on:
+  workflow_dispatch:
+    inputs:
+      mega_folder_url:
+        description: 'MEGA Folder URL'
+        required: true
+        type: string
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pycryptodome
+      
+      - name: Run MEGA converter
+        env:
+          MEGA_FOLDER_URL: ${{ inputs.mega_folder_url }}
+        run: |
+          python mega_to_direct_links.py "$MEGA_FOLDER_URL"
