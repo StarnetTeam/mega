@@ -1,0 +1,5 @@
+[*] جاري الدخول إلى ماي سيما...
+[!] حدث خطأ غير متوقع: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://mycima.gripe/", waiting until "networkidle"
+
