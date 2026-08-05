@@ -1,33 +1,44 @@
-name: MEGA to Direct Links Converter
+name: Scrape MyCima
 
 on:
+  schedule:
+    # تشغيل كل 6 ساعات
+    - cron: '0 */6 * * *'
   workflow_dispatch:
-    inputs:
-      mega_folder_url:
-        description: 'MEGA Folder URL'
-        required: true
-        type: string
 
 jobs:
-  convert:
+  scrape:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-      
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests pycryptodome
-      
-      - name: Run MEGA converter
-        env:
-          MEGA_FOLDER_URL: ${{ inputs.mega_folder_url }}
-        run: |
-          python mega_to_direct_links.py "$MEGA_FOLDER_URL"
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        playwright install chromium
+
+    - name: Run scraper
+      run: python mycima_final_scraper.py > scrape_results.txt
+
+    - name: Upload results as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: mycima-scrape-results
+        path: scrape_results.txt
+
+    - name: Commit and push if changes
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "github-actions@github.com"
+        git add scrape_results.txt
+        git commit -m "Update MyCima scrape results" || echo "No changes to commit"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
