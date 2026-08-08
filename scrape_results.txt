@@ -1,17 +1,5 @@
 [*] جاري الدخول إلى ماي سيما...
-[+] تم العثور على 38 عنصر جديد.
-------------------------------
-DONE: فيلم خلي بالك من نفسك 2026
-DONE: فيلم شمشون ودليلة 2026
-DONE: مشاهدة فيلم Spider-Man: Brand New Day 2026 مترجم
-DONE: مشاهدة فيلم The Gentleman Thief 2026 مترجم
-DONE: مشاهدة مسلسل The Walking Dead: Dead City الموسم الثالث الحلقة 1 مترجمة
+[!] حدث خطأ غير متوقع: Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://mycima.gripe/", waiting until "networkidle"
 
-================================================================================
-اسم المحتوى                                   | الجودة          | رابط التحميل 720p
-================================================================================
-فيلم خلي بالك من نفسك 2026                    | HD CAM          | https://mycima-my.com/?secure_stream=eJwVjgtOBDAIRG-0W0pbwNvwjUbXNWo0enoxJBMIDPMePz_fPh6uV_191-fL7cefbnrxr2vcv19f7hpXElkKgiJCfGpbrZmJaj7EzqhchBgAK-tgxua9oQYKLNRk1Bgi4JnrJO3ZHm7PmAaMXixTiExIy1dE7C4O8GFIUzg0VHYnV2e7j0iB4ISYrDFrNkRf-GxdBnb0X0tANjHV8d67ZAzPbpGsh2Mr2MTLZrCepoPYJoJMetg51Rktm6EinKRMNeWE9V_8A0WiWmg.f4ce803c75565620
-فيلم شمشون ودليلة 2026                        | غير محددة       | غير متوفر
-مشاهدة فيلم Spider-Man: Brand New Day 2026 مت | 1080p HDTS      | https://mycima-my.com/?secure_stream=eJzLKCkpKLbS1y_JLzDSy61MzsxN1Esu07cvK4lPyS_Py8lPTLHNC3U1KAiNMovMsazINy7MiEz0TfYNdTX0qfLIyDcyrYw0csnMN_IwLArxLMsLrTTO80ou9TYqsVUrtDU3MijQ9nABAERnIq8.8c3f995f5e871b5e
-مشاهدة فيلم The Gentleman Thief 2026 مترجم    | غير محددة       | غير متوفر
-مشاهدة مسلسل The Walking Dead: Dead City المو | غير محددة       | غير متوفر
